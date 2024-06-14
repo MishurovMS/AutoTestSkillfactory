@@ -57,7 +57,29 @@ public class SiteHeaderPage {
     @FindBy(xpath = "//*[contains(@class, 'tn-elem__6188040781689910041853')]")
     private WebElement OtherButton;
 
+    /**
+     * определение локатора кнопки
+     *
+     * @Tag(‘’CareerCenter’’)
+     */
+    @FindBy(xpath = "//*[contains(@class, 'main__nav-item')]")
+    private WebElement CareerCenterButton;
 
+    /**
+     * определение локатора кнопки
+     *
+     * @Tag(‘’ToEmployers’’)
+     */
+    @FindBy(xpath = "//*[contains(@class, 'tn-elem__3508653801628851978871')]")
+    private WebElement ToEmployersButton;
+
+    /**
+     * определение локатора кнопки
+     *
+     * @Tag(‘’Students’’)
+     */
+    @FindBy(xpath = "//*[contains(@class, 'tn-elem__3508653801630244968952')]")
+    private WebElement StudentsButton;
 
 
 }
