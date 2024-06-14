@@ -62,7 +62,7 @@ public class SiteHeaderPage {
      *
      * @Tag(‘’CareerCenter’’)
      */
-    @FindBy(xpath = "//*[contains(@class, 'main__nav-item')]")
+    @FindBy(css = "li:nth-child(3) > .main__nav-item")
     private WebElement CareerCenterButton;
 
     /**
@@ -80,6 +80,14 @@ public class SiteHeaderPage {
      */
     @FindBy(xpath = "//*[contains(@class, 'tn-elem__3508653801630244968952')]")
     private WebElement StudentsButton;
+
+    /**
+     * определение локатора кнопки
+     *
+     * @Tag(‘’Media’’)
+     */
+    @FindBy(css = "li:nth-child(5) > .main__nav-item")
+    private WebElement MediaButton;
 
 
 }
