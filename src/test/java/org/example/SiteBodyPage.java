@@ -16,134 +16,137 @@ public class SiteBodyPage {
         this.driver = driver;
     }
 
-    /**
-     * определение локатора кнопки
-     *
-     * @Tag(‘’AllCourses’’)
-     */
-    @FindBy(css = ".directions__list-link_green > span")
-    private WebElement AllCoursesButton;
+    public void openPage() {
+        driver.get("https://skillfactory.ru");}
 
-    /**
-     * определение локатора кнопки
-     *
-     * @Tag(‘’Programming’’)
-     */
-    @FindBy(css = "li:nth-child(1) > .directions__list-link > span")
-    private WebElement ProgrammingButton;
+        /**
+         * определение локатора кнопки
+         *
+         * @Tag(‘’AllCourses’’)
+         */
+        @FindBy(css = ".directions__list-link_green > span")
+        private WebElement AllCoursesButton;
 
-    /**
-     * определение локатора кнопки
-     *
-     * @Tag(‘’DataAnalytics’’)
-     */
-    @FindBy(css = "li:nth-child(3) > .directions__list-link > span")
-    private WebElement DataAnalyticsButton;
+        /**
+         * определение локатора кнопки
+         *
+         * @Tag(‘’Programming’’)
+         */
+        @FindBy(css = "li:nth-child(1) > .directions__list-link > span")
+        private WebElement ProgrammingButton;
 
-    /**
-     * определение локатора кнопки
-     *
-     * @Tag(‘’Testing’’)
-     */
-    @FindBy(css = "li:nth-child(4) > .directions__list-link > span")
-    private WebElement TestingButton;
+        /**
+         * определение локатора кнопки
+         *
+         * @Tag(‘’DataAnalytics’’)
+         */
+        @FindBy(css = "li:nth-child(3) > .directions__list-link > span")
+        private WebElement DataAnalyticsButton;
 
-    /**
-     * определение локатора кнопки
-     *
-     * @Tag(‘’Design’’)
-     */
-    @FindBy(css = "li:nth-child(6) > .directions__list-link > span")
-    private WebElement DesignButton;
+        /**
+         * определение локатора кнопки
+         *
+         * @Tag(‘’Testing’’)
+         */
+        @FindBy(css = "li:nth-child(4) > .directions__list-link > span")
+        private WebElement TestingButton;
 
-    /**
-     * определение локатора кнопки
-     *
-     * @Tag(‘’HigherEducation’’)
-     */
-    @FindBy(css = "li:nth-child(5) > .directions__list-link > span")
-    private WebElement HigherEducationButton;
+        /**
+         * определение локатора кнопки
+         *
+         * @Tag(‘’Design’’)
+         */
+        @FindBy(css = "li:nth-child(6) > .directions__list-link > span")
+        private WebElement DesignButton;
 
-    /**
-     * определение локатора кнопки
-     *
-     * @Tag(‘’Management’’)
-     */
-    @FindBy(css = "li:nth-child(7) > .directions__list-link > span")
-    private WebElement ManagementButton;
+        /**
+         * определение локатора кнопки
+         *
+         * @Tag(‘’HigherEducation’’)
+         */
+        @FindBy(css = "li:nth-child(5) > .directions__list-link > span")
+        private WebElement HigherEducationButton;
 
-    /**
-     * определение локатора кнопки
-     *
-     * @Tag(‘’DataScience’’)
-     */
-    @FindBy(css = "li:nth-child(2) > .directions__list-link > span")
-    private WebElement DataScienceButton;
+        /**
+         * определение локатора кнопки
+         *
+         * @Tag(‘’Management’’)
+         */
+        @FindBy(css = "li:nth-child(7) > .directions__list-link > span")
+        private WebElement ManagementButton;
+
+        /**
+         * определение локатора кнопки
+         *
+         * @Tag(‘’DataScience’’)
+         */
+        @FindBy(css = "li:nth-child(2) > .directions__list-link > span")
+        private WebElement DataScienceButton;
 
 
-    /**
-     * Метод нажатия кнопки AllCoursesButton
-     */
+        /**
+         * Метод нажатия кнопки AllCoursesButton
+         */
 
-    public void clickAllCoursesButton() {
-        AllCoursesButton.click();
+        public void clickAllCoursesButton() {
+            AllCoursesButton.click();
+
+        }
+
+        /**
+         * Метод нажатия кнопки Programming
+         */
+
+        public void clickProgrammingButton () {
+            ProgrammingButton.click();
+        }
+
+        /**
+         * Метод нажатия кнопки DataAnalytics
+         */
+
+        public void clickDataAnalyticsButton () {
+            DataAnalyticsButton.click();
+        }
+
+        /**
+         * Метод нажатия кнопки Testing
+         */
+
+        public void clickTestingButton () {
+            TestingButton.click();
+        }
+
+        /**
+         * Метод нажатия кнопки Design
+         */
+
+        public void clickDesignButton () {
+            DesignButton.click();
+        }
+
+        /**
+         * Метод нажатия кнопки HigherEducation
+         */
+
+        public void clickHigherEducationButton () {
+            HigherEducationButton.click();
+        }
+
+        /**
+         * Метод нажатия кнопки Management
+         */
+
+        public void clickManagementButton () {
+            ManagementButton.click();
+        }
+
+        /**
+         * Метод нажатия кнопки DataScience
+         */
+
+        public void clickDataScienceButton () {
+            DataScienceButton.click();
+        }
 
     }
-
-    /**
-     * Метод нажатия кнопки Programming
-     */
-
-    public void clickProgrammingButton() {
-        ProgrammingButton.click();
-    }
-
-    /**
-     * Метод нажатия кнопки DataAnalytics
-     */
-
-    public void clickDataAnalyticsButton() {
-        DataAnalyticsButton.click();
-    }
-
-    /**
-     * Метод нажатия кнопки Testing
-     */
-
-    public void clickTestingButton() {
-        TestingButton.click();
-    }
-
-    /**
-     * Метод нажатия кнопки Design
-     */
-
-    public void clickDesignButton() {
-        DesignButton.click();
-    }
-
-    /**
-     * Метод нажатия кнопки HigherEducation
-     */
-
-    public void clickHigherEducationButton() {
-        HigherEducationButton.click();
-    }
-
-    /**
-     * Метод нажатия кнопки Management
-     */
-
-    public void clickManagementButton() {
-        ManagementButton.click();
-    }
-
-    /**
-     * Метод нажатия кнопки DataScience
-     */
-
-    public void clickDataScienceButton() {
-        DataScienceButton.click();
-    }
-
-}

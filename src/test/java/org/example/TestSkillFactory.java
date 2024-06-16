@@ -2,16 +2,21 @@ package org.example;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+
 import java.time.Duration;
-import java.util.Map;
+
 
 
 public class TestSkillFactory {
     public static WebDriver driver;
-    private Map<String, Object> vars;
+
 
     @BeforeAll
     static void installDriever() {
@@ -22,7 +27,7 @@ public class TestSkillFactory {
     public void setup() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(6));
+
 
     }
 
@@ -39,12 +44,13 @@ public class TestSkillFactory {
     @Tag("Other")
     @Disabled
     @Test
-    public void OtherButton() {
+    public void OtherButton(){
         SiteHeaderPage siteHeaderPage = new SiteHeaderPage(driver);
         siteHeaderPage.openPage();
         siteHeaderPage.clickContactsButton();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(6));
-        siteHeaderPage.clickOtherButton();
+        WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(30));
+        wait.until(ExpectedConditions.elementToBeClickable(By.className("//*[contains(@class, 'tn-elem__6188040781689910041835')]")));
+        //siteHeaderPage.clickOtherButton();
     }
 
     @Tag("CareerCenter")
@@ -60,11 +66,10 @@ public class TestSkillFactory {
     @Tag("ToEmployers")
     @Disabled
     @Test
-    public void ToEmployersButton() throws InterruptedException {
+    public void ToEmployersButton() {
         SiteHeaderPage siteHeaderPage = new SiteHeaderPage(driver);
         siteHeaderPage.openPage();
         siteHeaderPage.clickCareerCenterButton();
-        Thread.sleep(2000);
         siteHeaderPage.clickToEmployersButton();
 
     }
@@ -81,7 +86,7 @@ public class TestSkillFactory {
     }
 
     @Tag("Professions")
-    //@Disabled
+    @Disabled
     @Test
     public void ProfessionsButton() {
         SiteHeaderPage siteHeaderPage = new SiteHeaderPage(driver);
@@ -94,7 +99,7 @@ public class TestSkillFactory {
     }
 
     @Tag("Career")
-    //@Disabled
+    @Disabled
     @Test
     public void CareerButton() {
         SiteHeaderPage siteHeaderPage = new SiteHeaderPage(driver);
@@ -106,7 +111,7 @@ public class TestSkillFactory {
     }
 
     @Tag("KnowledgeBase")
-    //@Disabled
+    @Disabled
     @Test
     public void KnowledgeBaseButton() {
         SiteHeaderPage siteHeaderPage = new SiteHeaderPage(driver);
@@ -118,7 +123,7 @@ public class TestSkillFactory {
     }
 
     @Tag("Environment")
-    //@Disabled
+    @Disabled
     @Test
     public void EnvironmentButton() {
         SiteHeaderPage siteHeaderPage = new SiteHeaderPage(driver);
@@ -130,19 +135,20 @@ public class TestSkillFactory {
     }
 
     @Tag("IWantToStudy")
-    //@Disabled
+    @Disabled
     @Test
     public void IWantToStudyButton() {
         SiteHeaderPage siteHeaderPage = new SiteHeaderPage(driver);
         siteHeaderPage.openPage();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         siteHeaderPage.clickMediaButton();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         siteHeaderPage.clickIWantToStudyButton();
 
     }
 
     @Tag("CorporateTraining")
-    //@Disabled
+    @Disabled
     @Test
     public void CorporateTrainingButton() {
         SiteHeaderPage siteHeaderPage = new SiteHeaderPage(driver);
@@ -153,7 +159,97 @@ public class TestSkillFactory {
 
     }
 
+    @Tag("IsFree")
+    @Disabled
+    @Test
+    public void IsFreeButton() {
+        SiteHeaderPage siteHeaderPage = new SiteHeaderPage(driver);
+        siteHeaderPage.openPage();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        siteHeaderPage.clickIsFreeButton();
 
+
+    }
+
+    @Tag("AllCourses")
+    @Disabled
+    @Test
+    public void AllCoursesButton() {
+        SiteBodyPage siteBodyPage = new SiteBodyPage(driver);
+        siteBodyPage.openPage();
+        siteBodyPage.clickAllCoursesButton();
+
+    }
+
+    @Tag("AllCourses")
+    @Disabled
+    @Test
+    public void ProgrammingButton() {
+        SiteBodyPage siteBodyPage = new SiteBodyPage(driver);
+        siteBodyPage.openPage();
+        siteBodyPage.clickProgrammingButton();
+
+    }
+
+    @Tag("DataAnalytics")
+    @Disabled
+    @Test
+    public void DataAnalyticsButton() {
+        SiteBodyPage siteBodyPage = new SiteBodyPage(driver);
+        siteBodyPage.openPage();
+        siteBodyPage.clickDataAnalyticsButton();
+
+    }
+
+    @Tag("Testing")
+    @Disabled
+    @Test
+    public void TestingButton() {
+        SiteBodyPage siteBodyPage = new SiteBodyPage(driver);
+        siteBodyPage.openPage();
+        siteBodyPage.clickDataAnalyticsButton();
+
+    }
+
+    @Tag("Design")
+    @Disabled
+    @Test
+    public void DesignButton() {
+        SiteBodyPage siteBodyPage = new SiteBodyPage(driver);
+        siteBodyPage.openPage();
+        siteBodyPage.clickDesignButton();
+
+    }
+
+    @Tag("HigherEducation")
+    @Disabled
+    @Test
+    public void HigherEducationButton() {
+        SiteBodyPage siteBodyPage = new SiteBodyPage(driver);
+        siteBodyPage.openPage();
+        siteBodyPage.clickHigherEducationButton();
+
+    }
+
+    @Tag("Management")
+    @Disabled
+    @Test
+    public void ManagementButton() {
+        SiteBodyPage siteBodyPage = new SiteBodyPage(driver);
+        siteBodyPage.openPage();
+        siteBodyPage.clickManagementButton();
+
+    }
+
+    @Tag("DataScience")
+    @Disabled
+    @Test
+    public void DataScienceButton() {
+        SiteBodyPage siteBodyPage = new SiteBodyPage(driver);
+        siteBodyPage.openPage();
+        siteBodyPage.clickDataScienceButton();
+
+    }
 
 
     @AfterClass

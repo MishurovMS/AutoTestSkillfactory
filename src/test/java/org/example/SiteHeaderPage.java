@@ -1,9 +1,11 @@
 package org.example;
 
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
 
 
 
@@ -25,6 +27,8 @@ public class SiteHeaderPage {
     public void openPage() {
         driver.get("https://skillfactory.ru");
     }
+
+
 
     /**
      * определение локатора кнопки
@@ -63,7 +67,7 @@ public class SiteHeaderPage {
      *
      * @Tag(‘’Other’’)
      */
-    @FindBy(css = ".tn-elem__6188040781689910041853 > .tn-atom")
+    @FindBy(xpath = "//*[contains(@class, 't396__elem.tn-elem.tn-elem__6188040781689911197304')]")
     private WebElement OtherButton;
 
     /**
@@ -79,7 +83,7 @@ public class SiteHeaderPage {
      *
      * @Tag(‘’ToEmployers’’)
      */
-    @FindBy(linkText = "https://skillfactory.ru/career-center-employers")
+    @FindBy(linkText = "Работодателям")
     private WebElement ToEmployersButton;
 
     /**
