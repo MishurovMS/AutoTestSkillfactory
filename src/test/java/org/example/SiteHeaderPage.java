@@ -6,8 +6,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 
+
+
 public class SiteHeaderPage {
     public WebDriver driver;
+
 
     /**
      * конструктор класса, занимающийся инициализацией
@@ -17,12 +20,18 @@ public class SiteHeaderPage {
         this.driver = driver;
     }
 
+
+
+    public void openPage() {
+        driver.get("https://skillfactory.ru");
+    }
+
     /**
      * определение локатора кнопки
      *
      * @Tag(‘’Contacts’’)
      */
-    @FindBy(xpath = "//*[contains(@class, 'passp-field-login')]")
+    @FindBy(css = "li:nth-child(4) > .main__nav-item")
     private WebElement ContactsButton;
 
     /**
@@ -30,7 +39,7 @@ public class SiteHeaderPage {
      *
      * @Tag(‘’IWantToStartLearning’’)
      */
-    @FindBy(xpath = "//*[contains(@class, 'tn-elem__6188040781689910041838')]")
+    @FindBy(css = ".tn-elem__6188040781689910041838 > .tn-atom")
     private WebElement IWantToStartLearningButton;
 
     /**
@@ -54,7 +63,7 @@ public class SiteHeaderPage {
      *
      * @Tag(‘’Other’’)
      */
-    @FindBy(xpath = "//*[contains(@class, 'tn-elem__6188040781689910041853')]")
+    @FindBy(css = ".tn-elem__6188040781689910041853 > .tn-atom")
     private WebElement OtherButton;
 
     /**
@@ -70,7 +79,7 @@ public class SiteHeaderPage {
      *
      * @Tag(‘’ToEmployers’’)
      */
-    @FindBy(xpath = "//*[contains(@class, 'tn-elem__3508653801628851978871')]")
+    @FindBy(linkText = "https://skillfactory.ru/career-center-employers")
     private WebElement ToEmployersButton;
 
     /**
@@ -78,7 +87,7 @@ public class SiteHeaderPage {
      *
      * @Tag(‘’Students’’)
      */
-    @FindBy(xpath = "//*[contains(@class, 'tn-elem__3508653801630244968952')]")
+    @FindBy(linkText = "https://skillfactory.ru/career-center-employers")
     private WebElement StudentsButton;
 
     /**
@@ -88,6 +97,190 @@ public class SiteHeaderPage {
      */
     @FindBy(css = "li:nth-child(5) > .main__nav-item")
     private WebElement MediaButton;
+
+    /**
+     * определение локатора кнопки
+     *
+     * @Tag(‘’Professions’’)
+     */
+    @FindBy(css = ".header__nav li:nth-child(1) > .internal-link")
+    private WebElement ProfessionsButton;
+
+    /**
+     * определение локатора кнопки
+     *
+     * @Tag(‘’Career’’)
+     */
+    @FindBy(css = ".header__nav li:nth-child(2) > .internal-link")
+    private WebElement CareerButton;
+
+    /**
+     * определение локатора кнопки
+     *
+     * @Tag(‘’KnowledgeBase’’)
+     */
+    @FindBy(css = ".header__nav li:nth-child(3) > .internal-link")
+    private WebElement KnowledgeBaseButton;
+
+    /**
+     * определение локатора кнопки
+     *
+     * @Tag(‘’Environment’’)
+     */
+    @FindBy(css = ".header__nav li:nth-child(4) > .internal-link")
+    private WebElement EnvironmentButton;
+
+    /**
+     * определение локатора кнопки
+     *
+     * @Tag(‘’IWantToStudy’’)
+     */
+    @FindBy(linkText = "Хочу учиться")
+    private WebElement IWantToStudyButton;
+
+    /**
+     * определение локатора кнопки
+     *
+     * @Tag(‘’CorporateTraining’’)
+     */
+    @FindBy(css = "li:nth-child(6) > .main__nav-item")
+    private WebElement CorporateTrainingButton;
+
+    /**
+     * определение локатора кнопки
+     *
+     * @Tag(‘’IsFree’’)
+     */
+    @FindBy(linkText = "БЕСПЛАТНО")
+    private WebElement IsFreeButton;
+
+    /**
+     * Метод нажатия кнопки Contacts
+     */
+
+    public void clickContactsButton() {
+        ContactsButton.click();
+    }
+
+    /**
+     * Метод нажатия кнопки IWantToStartLearning
+     */
+
+    public void clickIWantToStartLearningButton() {
+        IWantToStartLearningButton.click();
+    }
+
+    /**
+     * Метод нажатия кнопки ImAlreadyInTraining
+     */
+
+    public void clickImAlreadyInTrainingButton() {
+        ImAlreadyInTrainingButton.click();
+    }
+
+    /**
+     * Метод нажатия кнопки IHaveACooperationOffer
+     */
+
+    public void clickIHaveACooperationOfferButton() {
+        IHaveACooperationOfferButton.click();
+    }
+
+    /**
+     * Метод нажатия кнопки Other
+     */
+
+    public void clickOtherButton() {
+        OtherButton.click();
+    }
+
+    /**
+     * Метод нажатия кнопки CareerCenter
+     */
+
+    public void clickCareerCenterButton() {
+        CareerCenterButton.click();
+    }
+
+    /**
+     * Метод нажатия кнопки ToEmployers
+     */
+
+    public void clickToEmployersButton() {
+        ToEmployersButton.click();
+    }
+
+    /**
+     * Метод нажатия кнопки Students
+     */
+
+    public void clickStudentsButton() {
+        StudentsButton.click();
+    }
+
+    /**
+     * Метод нажатия кнопки Media
+     */
+
+    public void clickMediaButton() {
+        MediaButton.click();
+    }
+
+    /**
+     * Метод нажатия кнопки Professions
+     */
+
+    public void clickProfessionsButton() {
+        ProfessionsButton.click();
+    }
+
+    /**
+     * Метод нажатия кнопки Career
+     */
+
+    public void clickCareerButton() {
+        CareerButton.click();
+    }
+
+    /**
+     * Метод нажатия кнопки KnowledgeBase
+     */
+
+    public void clickKnowledgeBaseButton() {
+        KnowledgeBaseButton.click();
+    }
+
+    /**
+     * Метод нажатия кнопки Environment
+     */
+
+    public void clickEnvironmentButton() {
+        EnvironmentButton.click();
+    }
+
+    /**
+     * Метод нажатия кнопки IWantToStudy
+     */
+
+    public void clickIWantToStudyButton() {
+        IWantToStudyButton.click();
+    }
+
+    /**
+     * Метод нажатия кнопки CorporateTraining
+     */
+
+    public void clickCorporateTrainingButton() {
+        CorporateTrainingButton.click();
+    }
+
+    /**
+     * Метод нажатия кнопки IsFree
+     */
+
+    public void clickIsFreeButton() {
+        IsFreeButton.click();
+    }
 
 
 }

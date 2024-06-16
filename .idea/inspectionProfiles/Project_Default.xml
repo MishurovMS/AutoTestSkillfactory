@@ -1,0 +1,8 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="JavadocDeclaration" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ADDITIONAL_TAGS" value="Tag(‘’Contacts’’),Tag(‘’IWantToStartLearning’’),Tag(‘’I'mAlreadyInTraining’’),Tag(‘’IHaveACooperationOffer’’),Tag(‘’Other’’),Tag(‘’CareerCenter’’),Tag(‘’ToEmployers’’),Tag(‘’Students’’),Tag(‘’Media’’),Tag(‘’Professions’’),Tag(‘’Professions’’),Tag(‘’IsFree’’),Tag(‘’CorporateTraining’’),Tag(‘’IWantToStudy’’),Tag(‘’Environment’’),Tag(‘’KnowledgeBase’’),Tag(‘’Career’’),Tag(‘’AllCourses’’),Tag(‘’Programming’’),Tag(‘’DataAnalytics’’),Tag(‘’Testing’’),Tag(‘’Design’’),Tag(‘’HigherEducation’’),Tag(‘’Management’’),Tag(‘’DataScience’’)" />
+    </inspection_tool>
+  </profile>
+</component>
