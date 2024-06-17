@@ -24,9 +24,7 @@ public class SiteHeaderPage {
 
 
 
-    public void openPage() {
-        driver.get("https://skillfactory.ru");
-    }
+
     public void getHandle(String url){
         driver.get(url);
     }

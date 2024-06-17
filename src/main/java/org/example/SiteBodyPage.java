@@ -16,8 +16,7 @@ public class SiteBodyPage {
         this.driver = driver;
     }
 
-    public void openPage() {
-        driver.get("https://skillfactory.ru");}
+
 
         /**
          * определение локатора кнопки
