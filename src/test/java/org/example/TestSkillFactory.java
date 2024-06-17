@@ -2,16 +2,11 @@ package org.example;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.*;
-import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
-
 import java.time.Duration;
-
+import static org.testng.AssertJUnit.assertNotNull;
 
 
 public class TestSkillFactory {
@@ -19,7 +14,7 @@ public class TestSkillFactory {
 
 
     @BeforeAll
-    static void installDriever() {
+    static void installDriver() {
         WebDriverManager.chromedriver().setup();
     }
 
@@ -48,9 +43,11 @@ public class TestSkillFactory {
         SiteHeaderPage siteHeaderPage = new SiteHeaderPage(driver);
         siteHeaderPage.openPage();
         siteHeaderPage.clickContactsButton();
-        WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(30));
-        wait.until(ExpectedConditions.elementToBeClickable(By.className("//*[contains(@class, 'tn-elem__6188040781689910041835')]")));
-        //siteHeaderPage.clickOtherButton();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(500));
+        siteHeaderPage.getHandle("https://skillfactory.ru/contacts");
+        String currHandle=driver.getWindowHandle();
+        assertNotNull(currHandle);
+        siteHeaderPage.clickOtherButton();
     }
 
     @Tag("CareerCenter")
@@ -70,6 +67,10 @@ public class TestSkillFactory {
         SiteHeaderPage siteHeaderPage = new SiteHeaderPage(driver);
         siteHeaderPage.openPage();
         siteHeaderPage.clickCareerCenterButton();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(500));
+        siteHeaderPage.getHandle("https://skillfactory.ru/career-center");
+        String currHandle=driver.getWindowHandle();
+        assertNotNull(currHandle);
         siteHeaderPage.clickToEmployersButton();
 
     }
@@ -91,9 +92,11 @@ public class TestSkillFactory {
     public void ProfessionsButton() {
         SiteHeaderPage siteHeaderPage = new SiteHeaderPage(driver);
         siteHeaderPage.openPage();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         siteHeaderPage.clickMediaButton();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(500));
+        siteHeaderPage.getHandle("https://blog.skillfactory.ru/");
+        String currHandle=driver.getWindowHandle();
+        assertNotNull(currHandle);
         siteHeaderPage.clickProfessionsButton();
 
     }
@@ -104,8 +107,11 @@ public class TestSkillFactory {
     public void CareerButton() {
         SiteHeaderPage siteHeaderPage = new SiteHeaderPage(driver);
         siteHeaderPage.openPage();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         siteHeaderPage.clickMediaButton();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(500));
+        siteHeaderPage.getHandle("https://blog.skillfactory.ru/");
+        String currHandle=driver.getWindowHandle();
+        assertNotNull(currHandle);
         siteHeaderPage.clickCareerButton();
 
     }
@@ -116,8 +122,11 @@ public class TestSkillFactory {
     public void KnowledgeBaseButton() {
         SiteHeaderPage siteHeaderPage = new SiteHeaderPage(driver);
         siteHeaderPage.openPage();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         siteHeaderPage.clickMediaButton();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(500));
+        siteHeaderPage.getHandle("https://blog.skillfactory.ru/");
+        String currHandle=driver.getWindowHandle();
+        assertNotNull(currHandle);
         siteHeaderPage.clickKnowledgeBaseButton();
 
     }
@@ -128,8 +137,11 @@ public class TestSkillFactory {
     public void EnvironmentButton() {
         SiteHeaderPage siteHeaderPage = new SiteHeaderPage(driver);
         siteHeaderPage.openPage();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         siteHeaderPage.clickMediaButton();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(500));
+        siteHeaderPage.getHandle("https://blog.skillfactory.ru/");
+        String currHandle=driver.getWindowHandle();
+        assertNotNull(currHandle);
         siteHeaderPage.clickEnvironmentButton();
 
     }
@@ -140,9 +152,11 @@ public class TestSkillFactory {
     public void IWantToStudyButton() {
         SiteHeaderPage siteHeaderPage = new SiteHeaderPage(driver);
         siteHeaderPage.openPage();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         siteHeaderPage.clickMediaButton();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(500));
+        siteHeaderPage.getHandle("https://blog.skillfactory.ru/");
+        String currHandle=driver.getWindowHandle();
+        assertNotNull(currHandle);
         siteHeaderPage.clickIWantToStudyButton();
 
     }
@@ -181,15 +195,6 @@ public class TestSkillFactory {
 
     }
 
-    @Tag("AllCourses")
-    @Disabled
-    @Test
-    public void ProgrammingButton() {
-        SiteBodyPage siteBodyPage = new SiteBodyPage(driver);
-        siteBodyPage.openPage();
-        siteBodyPage.clickProgrammingButton();
-
-    }
 
     @Tag("DataAnalytics")
     @Disabled

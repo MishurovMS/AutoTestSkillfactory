@@ -27,6 +27,9 @@ public class SiteHeaderPage {
     public void openPage() {
         driver.get("https://skillfactory.ru");
     }
+    public void getHandle(String url){
+        driver.get(url);
+    }
 
 
 
@@ -67,7 +70,7 @@ public class SiteHeaderPage {
      *
      * @Tag(‘’Other’’)
      */
-    @FindBy(xpath = "//*[contains(@class, 't396__elem.tn-elem.tn-elem__6188040781689911197304')]")
+    @FindBy(css = ".tn-elem__6188040781689910041853 > .tn-atom")
     private WebElement OtherButton;
 
     /**
