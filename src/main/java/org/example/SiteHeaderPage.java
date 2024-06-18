@@ -7,9 +7,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 
-
-
-
 public class SiteHeaderPage {
     public WebDriver driver;
 
@@ -23,13 +20,8 @@ public class SiteHeaderPage {
     }
 
 
-
-
-    public void getHandle(String url){
-        driver.get(url);
-    }
-
-
+    @FindBy(className = "t-popup__block-close-button")
+    private WebElement closeTheForm;
 
     /**
      * определение локатора кнопки
@@ -162,6 +154,11 @@ public class SiteHeaderPage {
     /**
      * Метод нажатия кнопки Contacts
      */
+
+
+    public void clickCloseTheForm() {
+        closeTheForm.click();
+    }
 
     public void clickContactsButton() {
         ContactsButton.click();

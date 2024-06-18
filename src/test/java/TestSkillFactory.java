@@ -4,11 +4,8 @@ import org.example.SiteBodyPage;
 import org.example.SiteHeaderPage;
 import org.junit.jupiter.api.*;
 import org.testng.AssertJUnit;
-import org.testng.annotations.AfterClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import java.time.Duration;
-
 
 
 public class TestSkillFactory {
@@ -18,6 +15,7 @@ public class TestSkillFactory {
     @BeforeAll
     static void installDriver() {
         WebDriverManager.chromedriver().setup();
+
     }
 
     @BeforeEach
@@ -29,317 +27,319 @@ public class TestSkillFactory {
     }
 
     @Tag("Contacts")
-    @Disabled
+    //@Disabled
     @Test
     public void ContactsButton() {
         SiteHeaderPage siteHeaderPage = new SiteHeaderPage(driver);
-        GeneralMethods open = new GeneralMethods(driver);
-        open.openPage();
+        GeneralMethods gm = new GeneralMethods(driver);
+        gm.openPage();
         siteHeaderPage.clickContactsButton();
 
     }
 
     @Tag("IWantToStartLearning")
-    @Disabled
+    //@Disabled
     @Test
     public void IWantToStartLearningButton() {
         SiteHeaderPage siteHeaderPage = new SiteHeaderPage(driver);
-        GeneralMethods open = new GeneralMethods(driver);
-        open.openPage();
+        GeneralMethods gm = new GeneralMethods(driver);
+        gm.openPage();
         siteHeaderPage.clickContactsButton();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(500));
-        siteHeaderPage.getHandle("https://skillfactory.ru/contacts");
-        String currHandle=driver.getWindowHandle();
+        gm.delay(500);
+        gm.getHandle("https://skillfactory.ru/contacts");
+        String currHandle = driver.getWindowHandle();
         AssertJUnit.assertNotNull(currHandle);
         siteHeaderPage.clickIWantToStartLearningButton();
+
 
     }
 
     @Tag("ImAlreadyInTraining")
-    @Disabled
+    //@Disabled
     @Test
     public void ImAlreadyInTrainingButton() {
         SiteHeaderPage siteHeaderPage = new SiteHeaderPage(driver);
-        GeneralMethods open = new GeneralMethods(driver);
-        open.openPage();
+        GeneralMethods gm = new GeneralMethods(driver);
+        gm.openPage();
         siteHeaderPage.clickContactsButton();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(500));
-        siteHeaderPage.getHandle("https://skillfactory.ru/contacts");
-        String currHandle=driver.getWindowHandle();
+        gm.delay(500);
+        gm.getHandle("https://skillfactory.ru/contacts");
+        String currHandle = driver.getWindowHandle();
         AssertJUnit.assertNotNull(currHandle);
         siteHeaderPage.clickImAlreadyInTrainingButton();
+
 
     }
 
     @Tag("IHaveACooperationOffer")
-    @Disabled
+    //@Disabled
     @Test
     public void IHaveACooperationOfferButton() {
         SiteHeaderPage siteHeaderPage = new SiteHeaderPage(driver);
-        GeneralMethods open = new GeneralMethods(driver);
-        open.openPage();
+        GeneralMethods gm = new GeneralMethods(driver);
+        gm.openPage();
         siteHeaderPage.clickContactsButton();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(500));
-        siteHeaderPage.getHandle("https://skillfactory.ru/contacts");
-        String currHandle=driver.getWindowHandle();
+        gm.delay(500);
+        gm.getHandle("https://skillfactory.ru/contacts");
+        String currHandle = driver.getWindowHandle();
         AssertJUnit.assertNotNull(currHandle);
         siteHeaderPage.clickIHaveACooperationOfferButton();
 
     }
 
     @Tag("Other")
-    @Disabled
+    //@Disabled
     @Test
-    public void OtherButton(){
+    public void OtherButton() {
         SiteHeaderPage siteHeaderPage = new SiteHeaderPage(driver);
-        GeneralMethods open = new GeneralMethods(driver);
-        open.openPage();
+        GeneralMethods gm = new GeneralMethods(driver);
+        gm.openPage();
         siteHeaderPage.clickContactsButton();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(500));
-        siteHeaderPage.getHandle("https://skillfactory.ru/contacts");
-        String currHandle=driver.getWindowHandle();
+        gm.delay(500);
+        gm.getHandle("https://skillfactory.ru/contacts");
+        String currHandle = driver.getWindowHandle();
         AssertJUnit.assertNotNull(currHandle);
         siteHeaderPage.clickOtherButton();
+
     }
 
     @Tag("CareerCenter")
-    @Disabled
+    //@Disabled
     @Test
     public void CareerCenterButton() {
         SiteHeaderPage siteHeaderPage = new SiteHeaderPage(driver);
-        GeneralMethods open = new GeneralMethods(driver);
-        open.openPage();
+        GeneralMethods gm = new GeneralMethods(driver);
+        gm.openPage();
         siteHeaderPage.clickCareerCenterButton();
 
     }
 
     @Tag("ToEmployers")
-    @Disabled
+    //@Disabled
     @Test
     public void ToEmployersButton() {
         SiteHeaderPage siteHeaderPage = new SiteHeaderPage(driver);
-        GeneralMethods open = new GeneralMethods(driver);
-        open.openPage();
+        GeneralMethods gm = new GeneralMethods(driver);
+        gm.openPage();
         siteHeaderPage.clickCareerCenterButton();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(500));
-        siteHeaderPage.getHandle("https://skillfactory.ru/career-center");
-        String currHandle=driver.getWindowHandle();
+        gm.delay(500);
+        gm.getHandle("https://skillfactory.ru/career-center");
+        String currHandle = driver.getWindowHandle();
         AssertJUnit.assertNotNull(currHandle);
         siteHeaderPage.clickToEmployersButton();
 
     }
 
     @Tag("Media")
-    @Disabled
+    //@Disabled
     @Test
     public void MediaButton() {
         SiteHeaderPage siteHeaderPage = new SiteHeaderPage(driver);
-        GeneralMethods open = new GeneralMethods(driver);
-        open.openPage();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(6));
+        GeneralMethods gm = new GeneralMethods(driver);
+        gm.openPage();
+        gm.delay(10);
         siteHeaderPage.clickMediaButton();
 
     }
 
     @Tag("Professions")
-    @Disabled
+    //@Disabled
     @Test
     public void ProfessionsButton() {
         SiteHeaderPage siteHeaderPage = new SiteHeaderPage(driver);
-        GeneralMethods open = new GeneralMethods(driver);
-        open.openPage();
+        GeneralMethods gm = new GeneralMethods(driver);
+        gm.openPage();
         siteHeaderPage.clickMediaButton();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(500));
-        siteHeaderPage.getHandle("https://blog.skillfactory.ru/");
-        String currHandle=driver.getWindowHandle();
+        gm.delay(500);
+        gm.getHandle("https://blog.skillfactory.ru/");
+        String currHandle = driver.getWindowHandle();
         AssertJUnit.assertNotNull(currHandle);
         siteHeaderPage.clickProfessionsButton();
 
     }
 
     @Tag("Career")
-    @Disabled
+    //@Disabled
     @Test
     public void CareerButton() {
         SiteHeaderPage siteHeaderPage = new SiteHeaderPage(driver);
-        GeneralMethods open = new GeneralMethods(driver);
-        open.openPage();
+        GeneralMethods gm = new GeneralMethods(driver);
+        gm.openPage();
         siteHeaderPage.clickMediaButton();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(500));
-        siteHeaderPage.getHandle("https://blog.skillfactory.ru/");
-        String currHandle=driver.getWindowHandle();
+        gm.delay(500);
+        gm.getHandle("https://blog.skillfactory.ru/");
+        String currHandle = driver.getWindowHandle();
         AssertJUnit.assertNotNull(currHandle);
         siteHeaderPage.clickCareerButton();
 
     }
 
     @Tag("KnowledgeBase")
-    @Disabled
+    //@Disabled
     @Test
     public void KnowledgeBaseButton() {
         SiteHeaderPage siteHeaderPage = new SiteHeaderPage(driver);
-        GeneralMethods open = new GeneralMethods(driver);
-        open.openPage();
+        GeneralMethods gm = new GeneralMethods(driver);
+        gm.openPage();
         siteHeaderPage.clickMediaButton();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(500));
-        siteHeaderPage.getHandle("https://blog.skillfactory.ru/");
-        String currHandle=driver.getWindowHandle();
+        gm.delay(500);
+        gm.getHandle("https://blog.skillfactory.ru/");
+        String currHandle = driver.getWindowHandle();
         AssertJUnit.assertNotNull(currHandle);
         siteHeaderPage.clickKnowledgeBaseButton();
 
     }
 
     @Tag("Environment")
-    @Disabled
+    //@Disabled
     @Test
     public void EnvironmentButton() {
         SiteHeaderPage siteHeaderPage = new SiteHeaderPage(driver);
-        GeneralMethods open = new GeneralMethods(driver);
-        open.openPage();
+        GeneralMethods gm = new GeneralMethods(driver);
+        gm.openPage();
         siteHeaderPage.clickMediaButton();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(500));
-        siteHeaderPage.getHandle("https://blog.skillfactory.ru/");
-        String currHandle=driver.getWindowHandle();
+        gm.delay(500);
+        gm.getHandle("https://blog.skillfactory.ru/");
+        String currHandle = driver.getWindowHandle();
         AssertJUnit.assertNotNull(currHandle);
         siteHeaderPage.clickEnvironmentButton();
 
     }
 
     @Tag("IWantToStudy")
-    @Disabled
+    //@Disabled
     @Test
     public void IWantToStudyButton() {
         SiteHeaderPage siteHeaderPage = new SiteHeaderPage(driver);
-        GeneralMethods open = new GeneralMethods(driver);
-        open.openPage();
+        GeneralMethods gm = new GeneralMethods(driver);
+        gm.openPage();
         siteHeaderPage.clickMediaButton();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(500));
-        siteHeaderPage.getHandle("https://blog.skillfactory.ru/");
-        String currHandle=driver.getWindowHandle();
+        gm.delay(500);
+        gm.getHandle("https://blog.skillfactory.ru/");
+        String currHandle = driver.getWindowHandle();
         AssertJUnit.assertNotNull(currHandle);
         siteHeaderPage.clickIWantToStudyButton();
 
     }
 
     @Tag("CorporateTraining")
-    @Disabled
+    //@Disabled
     @Test
     public void CorporateTrainingButton() {
         SiteHeaderPage siteHeaderPage = new SiteHeaderPage(driver);
-        GeneralMethods open = new GeneralMethods(driver);
-        open.openPage();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        GeneralMethods gm = new GeneralMethods(driver);
+        gm.openPage();
+        gm.delay(10);
         siteHeaderPage.clickCorporateTrainingButton();
 
 
     }
 
     @Tag("IsFree")
-    @Disabled
+    //@Disabled
     @Test
     public void IsFreeButton() {
         SiteHeaderPage siteHeaderPage = new SiteHeaderPage(driver);
-        GeneralMethods open = new GeneralMethods(driver);
-        open.openPage();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        GeneralMethods gm = new GeneralMethods(driver);
+        gm.openPage();
+        gm.delay(10);
         siteHeaderPage.clickIsFreeButton();
 
 
     }
 
     @Tag("AllCourses")
-    @Disabled
+    //@Disabled
     @Test
     public void AllCoursesButton() {
         SiteBodyPage siteBodyPage = new SiteBodyPage(driver);
-        GeneralMethods open = new GeneralMethods(driver);
-        open.openPage();
+        GeneralMethods gm = new GeneralMethods(driver);
+        gm.openPage();
         siteBodyPage.clickAllCoursesButton();
 
     }
 
 
     @Tag("DataAnalytics")
-    @Disabled
+    //@Disabled
     @Test
     public void DataAnalyticsButton() {
         SiteBodyPage siteBodyPage = new SiteBodyPage(driver);
-        GeneralMethods open = new GeneralMethods(driver);
-        open.openPage();
+        GeneralMethods gm = new GeneralMethods(driver);
+        gm.openPage();
         siteBodyPage.clickDataAnalyticsButton();
 
     }
 
     @Tag("Testing")
-    @Disabled
+    //@Disabled
     @Test
     public void TestingButton() {
         SiteBodyPage siteBodyPage = new SiteBodyPage(driver);
-        GeneralMethods open = new GeneralMethods(driver);
-        open.openPage();
+        GeneralMethods gm = new GeneralMethods(driver);
+        gm.openPage();
         siteBodyPage.clickTestingButton();
 
     }
 
     @Tag("Design")
-    @Disabled
+    //@Disabled
     @Test
     public void DesignButton() {
         SiteBodyPage siteBodyPage = new SiteBodyPage(driver);
-        GeneralMethods open = new GeneralMethods(driver);
-        open.openPage();
+        GeneralMethods gm = new GeneralMethods(driver);
+        gm.openPage();
         siteBodyPage.clickDesignButton();
 
     }
 
     @Tag("HigherEducation")
-    @Disabled
+    //@Disabled
     @Test
     public void HigherEducationButton() {
         SiteBodyPage siteBodyPage = new SiteBodyPage(driver);
-        GeneralMethods open = new GeneralMethods(driver);
-        open.openPage();
+        GeneralMethods gm = new GeneralMethods(driver);
+        gm.openPage();
         siteBodyPage.clickHigherEducationButton();
 
     }
 
     @Tag("Management")
-    @Disabled
+    //@Disabled
     @Test
     public void ManagementButton() {
         SiteBodyPage siteBodyPage = new SiteBodyPage(driver);
-        GeneralMethods open = new GeneralMethods(driver);
-        open.openPage();
+        GeneralMethods gm = new GeneralMethods(driver);
+        gm.openPage();
         siteBodyPage.clickManagementButton();
 
     }
 
     @Tag("DataScience")
-    @Disabled
+    //@Disabled
     @Test
     public void DataScienceButton() {
         SiteBodyPage siteBodyPage = new SiteBodyPage(driver);
-        GeneralMethods open = new GeneralMethods(driver);
-        open.openPage();
+        GeneralMethods gm = new GeneralMethods(driver);
+        gm.openPage();
         siteBodyPage.clickDataScienceButton();
 
     }
 
     @Tag("Programming")
-    @Disabled
+    //@Disabled
     @Test
     public void ProgrammingButton() {
         SiteBodyPage siteBodyPage = new SiteBodyPage(driver);
-        GeneralMethods open = new GeneralMethods(driver);
-        open.openPage();
+        GeneralMethods gm = new GeneralMethods(driver);
+        gm.openPage();
         siteBodyPage.clickProgrammingButton();
 
     }
 
-
-    @AfterClass
+    @AfterEach
     public void closeBrowser() {
-        driver.close();
+        driver.quit();
     }
 
 

@@ -2,6 +2,9 @@ package org.example;
 
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import java.time.Duration;
 
 
 public class GeneralMethods {
@@ -12,13 +15,16 @@ public class GeneralMethods {
     }
 
 
-
-
     public void openPage() {
         driver.get(ConfProperties.getProperty("siteName"));
     }
-    public void getHandle(String url){
+
+    public void getHandle(String url) {
         driver.get(url);
+    }
+
+    public void delay(int time) {
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(time));
     }
 
 }
