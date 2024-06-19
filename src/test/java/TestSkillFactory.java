@@ -103,6 +103,29 @@ public class TestSkillFactory {
 
     }
 
+    @Tag("Field")
+    //@Disabled
+    @Test
+    public void Field() {
+        SiteHeaderPage siteHeaderPage = new SiteHeaderPage(driver);
+        GeneralMethods gm = new GeneralMethods(driver);
+        gm.openPage();
+        siteHeaderPage.clickContactsButton();
+        gm.delay(10);
+        gm.getHandle("https://skillfactory.ru/contacts");
+        String currHandle = driver.getWindowHandle();
+        AssertJUnit.assertNotNull(currHandle);
+        siteHeaderPage.clickIWantToStartLearningButton();
+        gm.delay(500);
+        siteHeaderPage.inputName();
+        siteHeaderPage.inputEmail();
+        siteHeaderPage.inputPhoneNumber();
+        siteHeaderPage.inputField();
+        siteHeaderPage.sendButton();
+
+
+    }
+
     @Tag("CareerCenter")
     //@Disabled
     @Test

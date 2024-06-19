@@ -19,9 +19,45 @@ public class SiteHeaderPage {
         this.driver = driver;
     }
 
+    /**
+     * определение локатора кнопки
+     *
+     * @Tag(‘’FieldName’’)
+     */
+    @FindBy(id="input_1495810359387")
+    private WebElement entryFieldName;
 
-    @FindBy(className = "t-popup__block-close-button")
-    private WebElement closeTheForm;
+    /**
+     * определение локатора кнопки
+     *
+     * @Tag(‘’FieldEmail’’)
+     */
+    @FindBy(id="input_1495810354468")
+    private WebElement entryFieldEmail;
+
+    /**
+     * определение локатора кнопки
+     *
+     * @Tag(‘’FieldPhoneNumber’’)
+     */
+    @FindBy(id="input_1495810410810")
+    private WebElement entryFieldPhoneNumber;
+
+    /**
+     * определение локатора кнопки
+     *
+     * @Tag(‘’entryField’’)
+     */
+    @FindBy(id="input_1658683104957")
+    private WebElement entryField;
+
+    /**
+     * определение локатора кнопки
+     *
+     * @Tag(‘’Send’’)
+     */
+    @FindBy(css ="#form618809645 .t-submit")
+    private WebElement Send;
 
     /**
      * определение локатора кнопки
@@ -151,14 +187,39 @@ public class SiteHeaderPage {
     @FindBy(linkText = "БЕСПЛАТНО")
     private WebElement IsFreeButton;
 
+
+
+    /**
+     * Метод ввода имени Name
+     */
+    public void inputName() {
+        entryFieldName.sendKeys(ConfProperties.getProperty("name")); }
+
+    /**
+     * Метод ввода Email
+     */
+    public void inputEmail() {
+        entryFieldEmail.sendKeys(ConfProperties.getProperty("email")); }
+
+    /**
+     * Метод ввода Number
+     */
+    public void inputPhoneNumber() {
+        entryFieldPhoneNumber.sendKeys(ConfProperties.getProperty("PhoneNumber")); }
+
+    /**
+     * Метод ввода Field
+     */
+    public void inputField() {
+        entryField.sendKeys(ConfProperties.getProperty("comment")); }
+
+    public void sendButton(){
+        Send.click();
+    }
+
     /**
      * Метод нажатия кнопки Contacts
      */
-
-
-    public void clickCloseTheForm() {
-        closeTheForm.click();
-    }
 
     public void clickContactsButton() {
         ContactsButton.click();
